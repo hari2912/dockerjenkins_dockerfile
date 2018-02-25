@@ -1,8 +1,8 @@
 pipeline {
     agent { 
         label 'Nodejs_slave1'}
-    agent { dockerfile true }
     stages {
+        agent { dockerfile true }
         stage('Test') {
             steps {
                 sh 'node --version'
