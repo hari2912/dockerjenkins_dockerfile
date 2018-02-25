@@ -2,8 +2,8 @@ pipeline {
     agent { 
         label 'Nodejs_slave1'}
     stages {
-        agent { dockerfile true }
         stage('Test') {
+            agent { dockerfile true }
             steps {
                 sh 'node --version'
                 sh 'mvn --version'
