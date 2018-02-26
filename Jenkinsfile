@@ -6,6 +6,12 @@ pipeline {
             agent { dockerfile true }
             steps {
                 sh 'node --version'
+            }
+        }
+    stages {
+        stage('docker') {
+            agent { dockerfile true }
+            steps {
                 sh 'mvn --version'
             }
         }
